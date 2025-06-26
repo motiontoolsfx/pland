@@ -2,12 +2,14 @@
 
 import styles from './tabBar.module.css'
 import { useState, JSX } from 'react'
-import { CalendarIcon, UserMinusIcon, UserGroupIcon, UsersIcon, CpuChipIcon, Cog6ToothIcon } from '@heroicons/react/24/solid'
+import { CalendarIcon, UserMinusIcon, UserGroupIcon, UsersIcon, CpuChipIcon, Cog6ToothIcon, ChartBarIcon } from '@heroicons/react/24/outline'
 import MasterSchedule from '../../MasterSchedule/MasterSchedule'
+import Dashboard from './Tabs/Dashboard/Dashboard'
 
-type TabKey = 'schedule' | 'absent' | 'subs' | 'coverage' | 'logic' | 'settings'
+type TabKey = 'dashboard' | 'schedule' | 'absent' | 'subs' | 'coverage' | 'logic' | 'settings'
 
 const tabs: Record<TabKey, { label: string; icon: JSX.Element; component: JSX.Element }> = {
+    dashboard: { label: "Dashboard", icon: <ChartBarIcon className={styles.icon} />, component: <Dashboard /> },
     schedule: { label: "Schedule", icon: <CalendarIcon className={styles.icon} />, component: <MasterSchedule /> },
     absent: { label: "Absent", icon: <UserMinusIcon className={styles.icon} />, component: <div>Absent Content</div> },
     subs: { label: "Subs", icon: <UserGroupIcon className={styles.icon} />, component: <div>Subs Content</div> },
@@ -17,7 +19,7 @@ const tabs: Record<TabKey, { label: string; icon: JSX.Element; component: JSX.El
 }
 
 export default function TabBar() {
-    const [activeTab, setActiveTab] = useState<TabKey>('schedule')
+    const [activeTab, setActiveTab] = useState<TabKey>('dashboard')
 
     return (
         <div className='page-width'>

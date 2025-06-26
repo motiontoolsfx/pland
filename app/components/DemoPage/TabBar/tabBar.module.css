@@ -1,12 +1,12 @@
 .bar {
-    background: var(--border);
+    background: var(--foreground);
     padding: 0.25rem;
     border-radius: var(--border-radius);
     display: flex;
     justify-content: space-between;
     gap: 0.25rem;
     width: max-content;
-    margin: auto;
+    margin: 2rem auto;
 }
 
 .tabButton {

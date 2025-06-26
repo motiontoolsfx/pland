@@ -15,6 +15,26 @@
 }
 
 .header nav a {
-    all: unset;
+    text-decoration: none;
+    color: var(--text-primary);
     cursor: pointer;
+}
+
+.iconLink {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    width: max-content;
+}
+
+.iconLink div {
+    background-color: var(--accent);
+    padding: 0.5rem;
+    border-radius: var(--border-radius);
+}
+
+
+.iconLink div svg {
+    width: 1rem;
+    color: var(--foreground);
 }

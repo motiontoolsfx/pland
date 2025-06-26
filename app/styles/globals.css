@@ -1,5 +1,5 @@
 :root {
-  --background: #F0F4F4;
+  --background: #e8eeee;
   --foreground: #F7FAFA;
   --background-dark: #BCC7C7;
   --accent: #4F8A8B;
@@ -10,6 +10,13 @@
   --border: #B0C4C4;
 
   --border-radius: 8px;
+
+  --shadow-light: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --shadow-dark: 0 8px 16px rgba(0, 0, 0, 0.15);
+
+  --transition-s: 100ms ease;
+  --transition-m: 250ms ease;
+  --transition-l: 500ms ease;
 }
 
 html,
@@ -39,4 +46,18 @@ body {
   padding-left: 1rem;
   padding-right: 1rem;
   width: 100%;
+}
+
+.card {
+  background-color: var(--foreground);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-light);
+  padding: 1rem;
+  transition: transform var(--transition-s), box-shadow var(--transition-s);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-dark);
 }
