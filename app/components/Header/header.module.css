@@ -1,0 +1,20 @@
+.header {
+    background: var(--foreground);
+}
+
+.header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4rem;
+}
+
+.header nav div {
+    display: flex;
+    gap: 2rem;
+}
+
+.header nav a {
+    all: unset;
+    cursor: pointer;
+}

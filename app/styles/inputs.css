@@ -1,0 +1,55 @@
+.btn-solid {
+    background-color: var(--accent);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-solid:hover {
+    background-color: #367070;
+}
+
+.btn-solid:disabled {
+    background-color: #A0B0B0;
+    cursor: not-allowed;
+    color: #E0E0E0;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--accent);
+    border: 2px solid var(--accent);
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-outline:hover {
+    background-color: var(--accent);
+    color: white;
+}
+
+.btn-outline:disabled {
+    border-color: #A0B0B0;
+    color: #A0B0B0;
+    cursor: not-allowed;
+    background-color: transparent;
+}
+
+.input-text {
+    padding: 8px 12px;
+    border: 1.5px solid var(--accent);
+    border-radius: 4px;
+    font-size: 16px;
+    color: #2F3E3E;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.input-text:focus {
+    border-color: #367070;
+}

@@ -1,0 +1,28 @@
+.bar {
+    background: var(--border);
+    padding: 0.25rem;
+    border-radius: var(--border-radius);
+    display: flex;
+    justify-content: space-between;
+    gap: 0.25rem;
+    width: max-content;
+    margin: auto;
+}
+
+.tabButton {
+    all: unset;
+    padding: 0.5rem 0.75rem;
+    border-radius: var(--border-radius);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.tabButton svg {
+    width: 1rem;
+}
+
+.activeTab {
+    background: var(--background);
+}
