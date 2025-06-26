@@ -1,0 +1,11 @@
+.section {
+    margin: 4rem auto;
+    background: var(--foreground);
+    padding: 4rem 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}

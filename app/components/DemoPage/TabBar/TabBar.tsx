@@ -5,6 +5,7 @@ import { useState, JSX } from 'react'
 import { CalendarIcon, UserMinusIcon, UserGroupIcon, UsersIcon, CpuChipIcon, Cog6ToothIcon, ChartBarIcon } from '@heroicons/react/24/outline'
 import MasterSchedule from '../../MasterSchedule/MasterSchedule'
 import Dashboard from './Tabs/Dashboard/Dashboard'
+import Subs from './Tabs/Subs/Subs'
 
 type TabKey = 'dashboard' | 'schedule' | 'absent' | 'subs' | 'coverage' | 'logic' | 'settings'
 
@@ -12,7 +13,7 @@ const tabs: Record<TabKey, { label: string; icon: JSX.Element; component: JSX.El
     dashboard: { label: "Dashboard", icon: <ChartBarIcon className={styles.icon} />, component: <Dashboard /> },
     schedule: { label: "Schedule", icon: <CalendarIcon className={styles.icon} />, component: <MasterSchedule /> },
     absent: { label: "Absent", icon: <UserMinusIcon className={styles.icon} />, component: <div>Absent Content</div> },
-    subs: { label: "Subs", icon: <UserGroupIcon className={styles.icon} />, component: <div>Subs Content</div> },
+    subs: { label: "Subs", icon: <UserGroupIcon className={styles.icon} />, component: <Subs /> },
     coverage: { label: "Coverage", icon: <UsersIcon className={styles.icon} />, component: <div>Coverage Content</div> },
     logic: { label: "Logic", icon: <CpuChipIcon className={styles.icon} />, component: <div>Logic Content</div> },
     settings: { label: "Settings", icon: <Cog6ToothIcon className={styles.icon} />, component: <div>Settings Content</div> },

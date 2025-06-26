@@ -1,5 +1,3 @@
-import "../../table.css";
-
 export default function MasterSchedule() {
     const scheduleData = [
         { teacher: "Mr. Smith", department: "Math", room: "101" },
@@ -12,29 +10,31 @@ export default function MasterSchedule() {
     const periods = ["1A", "2A", "3A", "4A", "5A", "6A", "7A", "8A", "9A", "1B", "2B", "3B", "4B", "5B", "6B", "7B", "8B", "9B"];
 
     return (
-        <table>
-            <thead>
-                <tr>
-                    <th>Teacher</th>
-                    <th>Department</th>
-                    <th>Room</th>
-                    {periods.map(period => (
-                        <th key={period}>{period}</th>
-                    ))}
-                </tr>
-            </thead>
-            <tbody>
-                {scheduleData.map((row, index) => (
-                    <tr key={index}>
-                        <td>{row.teacher}</td>
-                        <td>{row.department}</td>
-                        <td>{row.room}</td>
+        <div className='card'>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Teacher</th>
+                        <th>Department</th>
+                        <th>Room</th>
                         {periods.map(period => (
-                            <td key={period}></td>
+                            <th key={period}>{period}</th>
                         ))}
                     </tr>
-                ))}
-            </tbody>
-        </table>
+                </thead>
+                <tbody>
+                    {scheduleData.map((row, index) => (
+                        <tr key={index}>
+                            <td>{row.teacher}</td>
+                            <td>{row.department}</td>
+                            <td>{row.room}</td>
+                            {periods.map(period => (
+                                <td key={period}></td>
+                            ))}
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
+        </div>
     );
 }

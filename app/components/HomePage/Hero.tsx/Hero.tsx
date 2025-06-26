@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import styles from './hero.module.css'
 
 const YouTubeEmbed = ({ videoId }: { videoId: string }) => (
@@ -18,12 +19,13 @@ export default function Hero() {
             <div className={styles.hero}>
                 <div>
                     <div className={styles.text}>
-                        <h1>Streamline Teacher Scheduling and Coverage with Ease</h1>
+                        <h1>Streamline Teacher Scheduling and Coverage with Ease.</h1>
                         <p>Automate absences, assign substitutes, balance teacher loads, and keep your school day running smoothly—all in one platform.</p>
                     </div>
                     <div className={styles.contact}>
-                        <input className="input-text" placeholder="email"></input>
-                        <button className="btn-solid">Learn More</button>
+                        <input className="input-text" placeholder="Email"></input>
+                        <Link className="btn-outline" href={'/demo'}>Live Demo</Link>
+                        <button className="btn-solid">Get Notified First When It Launches</button>
                         <small>We'll never share your data with anyone.</small>
                     </div>
                 </div>

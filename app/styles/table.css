@@ -1,0 +1,30 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+tr {
+    background: var(--foreground);
+    transition: background var(--transition-s);
+}
+
+tr:hover {
+    background: var(--background);
+}
+
+th,
+td {
+    border-bottom: 1px solid var(--border);
+    padding: 1rem;
+    text-align: left;
+}
+
+th {
+    font-weight: bold;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}

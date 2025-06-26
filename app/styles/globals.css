@@ -54,10 +54,14 @@ body {
   border-radius: var(--border-radius);
   box-shadow: var(--shadow-light);
   padding: 1rem;
-  transition: transform var(--transition-s), box-shadow var(--transition-s);
+  transition: box-shadow var(--transition-s);
 }
 
 .card:hover {
-  transform: translateY(-4px);
   box-shadow: var(--shadow-dark);
+}
+
+a {
+  text-decoration: none;
+  text-align: center;
 }
