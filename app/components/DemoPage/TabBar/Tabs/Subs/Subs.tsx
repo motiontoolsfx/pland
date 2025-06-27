@@ -60,7 +60,7 @@ export default function Subs() {
                                 <td>{sub.qualifications.join(', ')}</td>
                                 <td>{sub.contact}</td>
                                 <td>{sub.status}</td>
-                                <td><PencilSquareIcon /></td>
+                                <td><button className={'iconBtn'}><PencilSquareIcon /></button></td>
                             </tr>
                         ))}
                     </tbody>

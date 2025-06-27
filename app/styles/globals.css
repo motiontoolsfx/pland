@@ -61,6 +61,13 @@ body {
   box-shadow: var(--shadow-dark);
 }
 
+.chip {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.8rem;
+  max-width: max-content;
+  border-radius: 2rem;
+}
+
 a {
   text-decoration: none;
   text-align: center;

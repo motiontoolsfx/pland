@@ -28,3 +28,12 @@ th {
 tr:last-child td {
     border-bottom: none;
 }
+
+.iconBtn {
+    all: unset;
+    cursor: pointer;
+}
+
+.iconBtn svg {
+    width: 1.5rem;
+}

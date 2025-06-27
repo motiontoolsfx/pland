@@ -2,12 +2,14 @@
 
 import styles from './tabBar.module.css'
 import { useState, JSX } from 'react'
-import { CalendarIcon, UserMinusIcon, UserGroupIcon, UsersIcon, CpuChipIcon, Cog6ToothIcon, ChartBarIcon } from '@heroicons/react/24/outline'
+import { CalendarIcon, UserMinusIcon, UserGroupIcon, UsersIcon, Cog6ToothIcon, ChartBarIcon, EnvelopeIcon } from '@heroicons/react/24/outline'
 import MasterSchedule from '../../MasterSchedule/MasterSchedule'
 import Dashboard from './Tabs/Dashboard/Dashboard'
 import Subs from './Tabs/Subs/Subs'
+import Notify from './Tabs/Notify/Notify'
+import Teachers from './Tabs/Teachers/Teachers'
 
-type TabKey = 'dashboard' | 'schedule' | 'absent' | 'subs' | 'coverage' | 'logic' | 'settings'
+type TabKey = 'dashboard' | 'schedule' | 'absent' | 'subs' | 'coverage' | 'notify' | 'settings' | 'teachers'
 
 const tabs: Record<TabKey, { label: string; icon: JSX.Element; component: JSX.Element }> = {
     dashboard: { label: "Dashboard", icon: <ChartBarIcon className={styles.icon} />, component: <Dashboard /> },
@@ -15,7 +17,8 @@ const tabs: Record<TabKey, { label: string; icon: JSX.Element; component: JSX.El
     absent: { label: "Absent", icon: <UserMinusIcon className={styles.icon} />, component: <div>Absent Content</div> },
     subs: { label: "Subs", icon: <UserGroupIcon className={styles.icon} />, component: <Subs /> },
     coverage: { label: "Coverage", icon: <UsersIcon className={styles.icon} />, component: <div>Coverage Content</div> },
-    logic: { label: "Logic", icon: <CpuChipIcon className={styles.icon} />, component: <div>Logic Content</div> },
+    notify: { label: "Notify", icon: <EnvelopeIcon className={styles.icon} />, component: <Notify /> },
+    teachers: { label: "Teachers", icon: <UserGroupIcon className={styles.icon} />, component: <Teachers /> },
     settings: { label: "Settings", icon: <Cog6ToothIcon className={styles.icon} />, component: <div>Settings Content</div> },
 }
 

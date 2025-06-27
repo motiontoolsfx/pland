@@ -18,7 +18,7 @@ export default function Header() {
                 </Link>
                 <div>
                     <Link href="/" className={isActive('/')}>Home</Link>
-                    <Link href="/demo" className={isActive('/demo')}>Demo</Link>
+                    <Link href="/demo" className={isActive('/demo')}>Live Demo</Link>
                 </div>
                 <button className="btn-solid">Contact</button>
             </nav>

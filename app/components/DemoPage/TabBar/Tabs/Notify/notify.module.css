@@ -1,0 +1,13 @@
+.field {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.field p {
+    border: 1px solid var(--border);
+}
+
+.textarea {
+    width: 100%;
+}
