@@ -8,13 +8,14 @@ import Dashboard from './Tabs/Dashboard/Dashboard'
 import Subs from './Tabs/Subs/Subs'
 import Notify from './Tabs/Notify/Notify'
 import Teachers from './Tabs/Teachers/Teachers'
+import Absent from './Tabs/Absent/Absent'
 
 type TabKey = 'dashboard' | 'schedule' | 'absent' | 'subs' | 'coverage' | 'notify' | 'settings' | 'teachers'
 
 const tabs: Record<TabKey, { label: string; icon: JSX.Element; component: JSX.Element }> = {
     dashboard: { label: "Dashboard", icon: <ChartBarIcon className={styles.icon} />, component: <Dashboard /> },
     schedule: { label: "Schedule", icon: <CalendarIcon className={styles.icon} />, component: <MasterSchedule /> },
-    absent: { label: "Absent", icon: <UserMinusIcon className={styles.icon} />, component: <div>Absent Content</div> },
+    absent: { label: "Absent", icon: <UserMinusIcon className={styles.icon} />, component: <Absent /> },
     subs: { label: "Subs", icon: <UserGroupIcon className={styles.icon} />, component: <Subs /> },
     coverage: { label: "Coverage", icon: <UsersIcon className={styles.icon} />, component: <div>Coverage Content</div> },
     notify: { label: "Notify", icon: <EnvelopeIcon className={styles.icon} />, component: <Notify /> },
